@@ -163,6 +163,7 @@ public class Hammurabi {
     }
 
     // README says to use harvest(int acres, int bushelsUsedAsSeed) but the test case only gives 1 argument
+    //return (double) harvestAmount / bushelsUsedAsSeed;
     public int harvest(int bushelsUsedAsSeed){
         int rate = genHarvestRate();
         return bushelsUsedAsSeed * rate;

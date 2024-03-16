@@ -7,6 +7,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class HammurabiTest {
     
     Hammurabi ham;
@@ -161,6 +163,20 @@ public class HammurabiTest {
         // Then
         Assert.assertEquals(expected, actual);
 
+    }
+
+    @Test
+    public final void testGenHarvestRate(){
+        ArrayList<Integer> output = new ArrayList<>();
+
+        for(int i = 0; i < 100; i++){
+            output.add(ham.genHarvestRate());
+        }
+        for(int i = 1; i < 7; i++){
+            Assert.assertTrue(output.contains(i));
+        }
+        Assert.assertFalse(output.contains(0));
+        Assert.assertFalse(output.contains(7));
     }
 
 }
