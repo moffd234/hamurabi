@@ -19,7 +19,7 @@ public class Hammurabi {
 
 
     public static void main(String[] args) {
-        //new Hammurabi().playGame();
+        new Hammurabi().playGame();
     }
 
     public Hammurabi(){
@@ -44,17 +44,22 @@ public class Hammurabi {
         int boughtLand = askHowManyAcresToBuy(landVal, bushels);
         landTotal = calcAddedLand(landTotal, boughtLand);
         bushels -= boughtLand * landVal;
+        System.out.println("Total land " + landTotal + " Total Bushels " + bushels);
 
         // Sell land and update variables
         int soldLand = askHowManyAcresToSell(landTotal);
         landTotal = calcSoldLand(landTotal, soldLand);
-        bushels += landTotal * landVal;
+        bushels += soldLand * landVal;
+        System.out.println("Total land " + landTotal + " Total Bushels " + bushels);
 
         // Feed the population
         int bushelsFed = askHowMuchGrainToFeedPeople(bushels);
         bushels -= bushelsFed;
+        System.out.println("Total Bushels " + bushels);
 
         // Plant bushels
+        int bushelsPlanted = askHowManyAcresToPlant(landTotal, population, bushels);
+        bushels -= bushelsPlanted;
 
     }
 
@@ -128,10 +133,32 @@ public class Hammurabi {
         while(numGrainFed > bushels){
             numGrainFed = getNumber("O Great Hammurabi, surely you jest! We have only " + bushels + " acres left!\n");
         }
-        return bushels;
+        return numGrainFed;
     }
 
-    
+    int askHowManyAcresToPlant(int acresOwned, int population, int bushels){
+        /*
+        Each person can farm 10 grain so numPlanted / 10 can't be > population
+        numPlanted can't be > bushels
+        numPlanted can't be > acresOwned
+         */
+        int numPlanted = getNumber("O great Hammurabi, how much grain do you wish to plant\n");
+
+        // WARNING: This does integer division so if the truncated result of numPlanted / 10 is greater than the
+        //          population then it still passes the conditional. This is due to the fact that the README
+        //          explicitly says "All the required arithmetic in this program should be integer.
+        //          You do not need doubles."
+        while(numPlanted > acresOwned || numPlanted > bushels || numPlanted / 10 > population){
+
+            // Inform the user of the current resources
+            System.out.println("Current acres " + acresOwned + "\nCurrent bushels " + bushels
+                    + "\nCurrent Population " + population);
+            numPlanted = getNumber("O great Hammurabi, surely you jest! We don't have enough resources for that\n");
+
+
+        }
+        return numPlanted;
+    }
 
     /**
      * Prints the given message (which should ask the user for some integral
