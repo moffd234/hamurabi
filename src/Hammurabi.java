@@ -74,6 +74,14 @@ public class Hammurabi {
             population -= numStarved;
             totalStarved += numStarved;
 
+            // Determine how many immigrants are coming
+            if(numStarved == 0){
+                immigrantNum = immigrants(population, landTotal, bushels);
+                population += immigrantNum;
+            }
+            else{
+                immigrantNum = 0;
+            }
             // Get new landVal
             landVal = newCostOfLand();
 
@@ -96,8 +104,8 @@ public class Hammurabi {
         return rand.nextInt(max - min + 1) + min;
     }
 
-    public int immigrants(int i, int i1, int i2) {
-        return 0;
+    public int immigrants(int population, int acresOwned, int grainInStorage) {
+        return (20 * acresOwned + grainInStorage) / (100 * population) + 1;
     }
 
     public int plagueDeaths(int i) {
@@ -219,7 +227,7 @@ public class Hammurabi {
             System.out.println("Good job! Your rule marks a time of great growth in the amount of land in our kingdom");
         }
         else{
-            System.out.println("You failed to manage your land efficiently and your rule has been remebered as one" +
+            System.out.println("You failed to manage your land efficiently and your rule has been remembered as one" +
                     "where the kingdom lost lots of land");
         }
     }

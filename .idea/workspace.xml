@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d409351-9f7f-4de2-93f3-7853256f5ed0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hammurabi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hammurabi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +46,7 @@
     "JUnit.HammurabiTest.testGenHarvestRate.executor": "Run",
     "JUnit.HammurabiTest.testGetYearMessage.executor": "Run",
     "JUnit.HammurabiTest.testHarvest.executor": "Run",
+    "JUnit.HammurabiTest.testImmigrants.executor": "Run",
     "JUnit.HammurabiTest.testNewCostOfLand.executor": "Run",
     "JUnit.HammurabiTest.testStarvationDeaths.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -72,7 +74,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HammurabiTest.testCalcHarvestRate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HammurabiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hamurabi" />
       <extension name="coverage">
         <pattern>
@@ -82,8 +84,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="hammurabi" />
       <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
-      <option name="METHOD_NAME" value="testCalcHarvestRate" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,6 +100,22 @@
       <option name="PACKAGE_NAME" value="hammurabi" />
       <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
       <option name="METHOD_NAME" value="testGetYearMessage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HammurabiTest.testImmigrants" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hamurabi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hammurabi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hammurabi" />
+      <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
+      <option name="METHOD_NAME" value="testImmigrants" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,29 +137,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HammurabiTest.testStarvationDeaths" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hamurabi" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hammurabi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hammurabi" />
-      <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
-      <option name="METHOD_NAME" value="testStarvationDeaths" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Hammurabi" />
+        <item itemvalue="JUnit.HammurabiTest.testImmigrants" />
+        <item itemvalue="JUnit.HammurabiTest" />
         <item itemvalue="JUnit.HammurabiTest.testGetYearMessage" />
         <item itemvalue="JUnit.HammurabiTest.testNewCostOfLand" />
-        <item itemvalue="JUnit.HammurabiTest.testCalcHarvestRate" />
-        <item itemvalue="JUnit.HammurabiTest.testStarvationDeaths" />
       </list>
     </recent_temporary>
   </component>
