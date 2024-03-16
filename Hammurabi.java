@@ -185,7 +185,7 @@ public class Hammurabi {
     public int getYear() {
         return year;
     }
-
+  
     public int getBushels() {
         return bushels;
     }
