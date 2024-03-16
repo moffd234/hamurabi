@@ -39,9 +39,23 @@ public class Hammurabi {
     void playGame() {
 
         printSummary();
+
+        // Buy land and update variables
         int boughtLand = askHowManyAcresToBuy(landVal, bushels);
-        landTotal = calcAddedLand(landVal, boughtLand);
+        landTotal = calcAddedLand(landTotal, boughtLand);
+        bushels -= boughtLand * landVal;
+
+        // Sell land and update variables
         int soldLand = askHowManyAcresToSell(landTotal);
+        landTotal = calcSoldLand(landTotal, soldLand);
+        bushels += landTotal * landVal;
+
+        // Feed the population
+        int bushelsFed = askHowMuchGrainToFeedPeople(bushels);
+        bushels -= bushelsFed;
+
+        // Plant bushels
+
     }
 
     public boolean uprising(int i, int i1) {
@@ -108,6 +122,16 @@ public class Hammurabi {
     public int calcSoldLand(int prevTotal, int acresSold){
         return prevTotal - acresSold;
     }
+
+    int askHowMuchGrainToFeedPeople(int bushels){
+        int numGrainFed = getNumber("O great Hammurabi, how much grain do you wish to feed your citizens");
+        while(numGrainFed > bushels){
+            numGrainFed = getNumber("O Great Hammurabi, surely you jest! We have only " + bushels + " acres left!\n");
+        }
+        return bushels;
+    }
+
+    
 
     /**
      * Prints the given message (which should ask the user for some integral
