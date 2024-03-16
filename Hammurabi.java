@@ -26,9 +26,7 @@ public class Hammurabi {
         grain = 2800;
         population = 100;
         landVal = 19;
-        immigrantNum = 0;
-        harvestRate = 0;
-        numHarvested = 0;
+        harvestRate = 1;
         totalLand = 1000;
         starvationDeathsNum = 0;
         immigrantNum = 0;
@@ -69,14 +67,14 @@ public class Hammurabi {
     }
     public String getYearMessage(){
         String output = "O great Hammurabi!\n" +
-                "You are in year" + year + " of your ten year rule.\n" +
-                "In the previous year" + starvationDeathsNum + "people starved to death.\n" +
-                "In the previous year" + immigrantNum + "people entered the kingdom.\n" +
-                "The population is now" + population + ".\n" +
-                "We harvested" + numHarvested + "bushels at" + harvestRate + "bushels per acre.\n" +
-                "Rats destroyed" + ratTotal + "bushels, leaving 2800 bushels in storage.\n" +
-                "The city owns" + totalLand + "acres of land.\n" +
-                "Land is currently worth" + landVal + "bushels per acre.";
+                "You are in year " + year + " of your ten year rule.\n" +
+                "In the previous year " + starvationDeathsNum + " people starved to death.\n" +
+                "In the previous year " + immigrantNum + " people entered the kingdom.\n" +
+                "The population is now " + population + ".\n" +
+                "We harvested " + numHarvested + " bushels at " + harvestRate + " bushels per acre.\n" +
+                "Rats destroyed " + ratTotal + " bushels, leaving " + grain + " bushels in storage.\n" +
+                "The city owns " + totalLand + " acres of land.\n" +
+                "Land is currently worth " + landVal + " bushels per acre.";
 
         return output;
     }
