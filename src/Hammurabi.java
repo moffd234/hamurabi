@@ -61,6 +61,10 @@ public class Hammurabi {
         int bushelsPlanted = askHowManyAcresToPlant(landTotal, population, bushels);
         bushels -= bushelsPlanted;
 
+        // Find the harvest rate between turns
+        numHarvested = harvest(bushelsPlanted);
+        harvestRate = calculateHarvestRate(numHarvested, bushelsPlanted);
+
     }
 
     public boolean uprising(int i, int i1) {
@@ -163,7 +167,6 @@ public class Hammurabi {
     }
 
     // README says to use harvest(int acres, int bushelsUsedAsSeed) but the test case only gives 1 argument
-    //return (double) harvestAmount / bushelsUsedAsSeed;
     public int harvest(int bushelsUsedAsSeed){
         int rate = genHarvestRate();
         return bushelsUsedAsSeed * rate;

@@ -58,7 +58,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.HammurabiTest.testCalcHarvestRate">
+  <component name="RunManager" selected="Application.Hammurabi">
     <configuration name="Hammurabi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hammurabi.src.Hammurabi" />
       <module name="hamurabi" />
@@ -137,10 +137,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Hammurabi" />
         <item itemvalue="JUnit.HammurabiTest.testCalcHarvestRate" />
         <item itemvalue="JUnit.HammurabiTest.testGenHarvestRate" />
         <item itemvalue="JUnit.HammurabiTest.testHarvest" />
-        <item itemvalue="Application.Hammurabi" />
         <item itemvalue="JUnit.HammurabiTest" />
       </list>
     </recent_temporary>
