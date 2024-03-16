@@ -1,4 +1,5 @@
 package hammurabi.src;
+import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -16,6 +17,7 @@ public class Hammurabi {
     int numStarved;
     int cropsEatenByRats;
     int landTotal;
+    int totalStarved;
 
 
     public static void main(String[] args) {
@@ -34,6 +36,7 @@ public class Hammurabi {
         immigrantNum = 5;
         numHarvested = 3000;
         cropsEatenByRats = 200;
+        totalStarved = 0;
     }
 
     void playGame() {
@@ -69,12 +72,14 @@ public class Hammurabi {
             // Handle starvation between rounds
             numStarved = starvationDeaths(population, bushelsFed);
             population -= numStarved;
+            totalStarved += numStarved;
 
             // Get new landVal
             landVal = newCostOfLand();
 
             year++;
         }
+        finalSummary();
     }
 
     public boolean uprising(int i, int i1) {
@@ -195,6 +200,28 @@ public class Hammurabi {
             return harvestAmount / bushelsUsedAsSeed;
         }
         return 0;
+    }
+
+    public void finalSummary(){
+        int acresPerPerson = landTotal / population;
+        System.out.println("---------FINAL SUMMARY---------\n" +
+                "Number of people starved = " + totalStarved + "\n" +
+                "Land per population " + acresPerPerson);
+        if(numStarved <= 10){
+            System.out.println("Great Job! You managed to starve less than 10% of your population");
+        }
+        else{
+            System.out.println("You failed to provide for your population and allowed "
+                    + totalStarved + "people to starve");
+        }
+
+        if(acresPerPerson > 10){
+            System.out.println("Good job! Your rule marks a time of great growth in the amount of land in our kingdom");
+        }
+        else{
+            System.out.println("You failed to manage your land efficiently and your rule has been remebered as one" +
+                    "where the kingdom lost lots of land");
+        }
     }
 
     /**
