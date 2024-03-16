@@ -13,7 +13,7 @@ public class Hammurabi {
     int numHarvested;
     int immigrantNum;
     int landVal;
-    int peopleStarvedLastYear;
+    int numStarved;
     int cropsEatenByRats;
     int landTotal;
 
@@ -30,7 +30,7 @@ public class Hammurabi {
         landVal = 19;
         harvestRate = 3;
         landTotal = 1000;
-        peopleStarvedLastYear = 0;
+        numStarved = 0;
         immigrantNum = 5;
         numHarvested = 3000;
         cropsEatenByRats = 200;
@@ -65,6 +65,10 @@ public class Hammurabi {
         numHarvested = harvest(bushelsPlanted);
         harvestRate = calculateHarvestRate(numHarvested, bushelsPlanted);
 
+        // Handle starvation between rounds
+        numStarved = starvationDeaths(population, bushelsFed);
+        population -= numStarved;
+
     }
 
     public boolean uprising(int i, int i1) {
@@ -87,13 +91,20 @@ public class Hammurabi {
         return 0;
     }
 
-    public int starvationDeaths(int i, int i1) {
+    // This doesn't pass the unit test unless you take the ceiling despite the README saying we don't need to do any
+    // arithmetic with floating point numbers
+    public int starvationDeaths(int population, int bushelsFedToPeople) {
+        int neededBushels = population * 20;
+        if (neededBushels > bushelsFedToPeople){
+            int remainingNeeded = neededBushels - bushelsFedToPeople;
+            return (int) Math.ceil((double) remainingNeeded / 20);
+        }
         return 0;
     }
     public String getSummary(){
         String output = "O great Hammurabi!\n" +
                 "You are in year " + year + " of your ten year rule.\n" +
-                "In the previous year " + peopleStarvedLastYear + " people starved to death.\n" +
+                "In the previous year " + numStarved + " people starved to death.\n" +
                 "In the previous year " + immigrantNum + " people entered the kingdom.\n" +
                 "The population is now " + population + ".\n" +
                 "We harvested " + numHarvested + " bushels at " + harvestRate + " bushels per acre.\n" +
@@ -173,7 +184,10 @@ public class Hammurabi {
     }
 
     public int calculateHarvestRate(int harvestAmount, int bushelsUsedAsSeed) {
-        return harvestAmount / bushelsUsedAsSeed;
+        if(bushelsUsedAsSeed != 0) {
+            return harvestAmount / bushelsUsedAsSeed;
+        }
+        return 0;
     }
 
     /**
@@ -198,41 +212,6 @@ public class Hammurabi {
     }
 
     // GETTERS
-    public int getYear() {
-        return year;
-    }
-
-    public int getBushels() {
-        return bushels;
-    }
-
-    public int getPopulation() {
-        return population;
-    }
-
-    public int getHarvestRate() {
-        return harvestRate;
-    }
-
-    public int getNumHarvested() {
-        return numHarvested;
-    }
-
-    public int getImmigrantNum() {
-        return immigrantNum;
-    }
-
-    public int getLandVal() {
-        return landVal;
-    }
-
-    public int getPeopleStarvedLastYear() {
-        return peopleStarvedLastYear;
-    }
-
-    public int getCropsEatenByRats() {
-        return cropsEatenByRats;
-    }
 
     public int getLandTotal() {
         return landTotal;
