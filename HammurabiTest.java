@@ -131,7 +131,7 @@ public class HammurabiTest {
                 "We harvested 3000 bushels at 3 bushels per acre.\n" +
                 "Rats destroyed 200 bushels, leaving 2800 bushels in storage.\n" +
                 "The city owns 1000 acres of land.\n" +
-                "Land is currently worth 19 bushels per acre.";
+                "Land is currently worth 19 bushels per acre.\n\n";
 
         String actual = ham.getSummary();
         Assert.assertEquals(expectedOutput, actual);

@@ -7,14 +7,14 @@ public class Hammurabi {
     Random rand = new Random();  // this is an instance variable
     Scanner scanner = new Scanner(System.in);
     int year;
-    int grain;
+    int bushels;
     int population;
     int harvestRate;
     int numHarvested;
     int immigrantNum;
     int landVal;
-    int starvationRate;
-    int ratTotal;
+    int peopleStarvedLastYear;
+    int cropsEatenByRats;
     int totalLand;
 
 
@@ -24,17 +24,20 @@ public class Hammurabi {
 
     public Hammurabi(){
 
+        // Setup initial values
         year = 1;
-        grain = 2800;
+        bushels = 2800;
         population = 100;
         landVal = 19;
         harvestRate = 3;
         totalLand = 1000;
-        starvationRate = 0;
+        peopleStarvedLastYear = 0;
         immigrantNum = 5;
         numHarvested = 3000;
-        ratTotal = 200;
-
+        cropsEatenByRats = 200;
+        printSummary();
+        int boughtLand = askHowManyAcresToBuy(landVal, bushels);
+        int soldLand = askHowManyAcresToSell(totalLand);
     }
 
     void playGame() {
@@ -70,18 +73,34 @@ public class Hammurabi {
     public String getSummary(){
         String output = "O great Hammurabi!\n" +
                 "You are in year " + year + " of your ten year rule.\n" +
-                "In the previous year " + starvationRate + " people starved to death.\n" +
+                "In the previous year " + peopleStarvedLastYear + " people starved to death.\n" +
                 "In the previous year " + immigrantNum + " people entered the kingdom.\n" +
                 "The population is now " + population + ".\n" +
                 "We harvested " + numHarvested + " bushels at " + harvestRate + " bushels per acre.\n" +
-                "Rats destroyed " + ratTotal + " bushels, leaving " + grain + " bushels in storage.\n" +
+                "Rats destroyed " + cropsEatenByRats + " bushels, leaving " + bushels + " bushels in storage.\n" +
                 "The city owns " + totalLand + " acres of land.\n" +
-                "Land is currently worth " + landVal + " bushels per acre.";
+                "Land is currently worth " + landVal + " bushels per acre.\n\n";
 
         return output;
     }
     public void printSummary(){
         System.out.println(getSummary());
+    }
+
+    int askHowManyAcresToBuy(int price, int bushels){
+        int numAcres = getNumber("O great Hammurabi, how many acres shall you buy?\n");
+        while(bushels < price * numAcres){
+            numAcres = getNumber("O Great Hammurabi, surely you jest! We have only " + bushels + " bushels left!\n");
+        }
+        return numAcres;
+    }
+
+    int askHowManyAcresToSell(int acresOwned){
+        int numAcres = getNumber("O great Hammurabi, how many acres shall you sell?\n");
+        while(numAcres > acresOwned){
+            numAcres = getNumber("O Great Hammurabi, surely you jest! We have only " + acresOwned + " acres left!\n");
+        }
+        return numAcres;
     }
 
     /**
@@ -110,8 +129,8 @@ public class Hammurabi {
         return year;
     }
 
-    public int getGrain() {
-        return grain;
+    public int getBushels() {
+        return bushels;
     }
 
     public int getPopulation() {
@@ -134,12 +153,12 @@ public class Hammurabi {
         return landVal;
     }
 
-    public int getStarvationRate() {
-        return starvationRate;
+    public int getPeopleStarvedLastYear() {
+        return peopleStarvedLastYear;
     }
 
-    public int getRatTotal() {
-        return ratTotal;
+    public int getCropsEatenByRats() {
+        return cropsEatenByRats;
     }
 
     public int getTotalLand() {
