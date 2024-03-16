@@ -69,6 +69,10 @@ public class Hammurabi {
         numStarved = starvationDeaths(population, bushelsFed);
         population -= numStarved;
 
+        // Get new landVal
+        landVal = newCostOfLand();
+
+        year++;
     }
 
     public boolean uprising(int i, int i1) {
@@ -80,7 +84,9 @@ public class Hammurabi {
     }
 
     public int newCostOfLand() {
-        return 0;
+        int min = 17;
+        int max = 23;
+        return rand.nextInt(max - min + 1) + min;
     }
 
     public int immigrants(int i, int i1, int i2) {
@@ -102,7 +108,8 @@ public class Hammurabi {
         return 0;
     }
     public String getSummary(){
-        String output = "O great Hammurabi!\n" +
+
+        return "O great Hammurabi!\n" +
                 "You are in year " + year + " of your ten year rule.\n" +
                 "In the previous year " + numStarved + " people starved to death.\n" +
                 "In the previous year " + immigrantNum + " people entered the kingdom.\n" +
@@ -111,8 +118,6 @@ public class Hammurabi {
                 "Rats destroyed " + cropsEatenByRats + " bushels, leaving " + bushels + " bushels in storage.\n" +
                 "The city owns " + landTotal + " acres of land.\n" +
                 "Land is currently worth " + landVal + " bushels per acre.\n\n";
-
-        return output;
     }
     public void printSummary(){
         System.out.println(getSummary());
