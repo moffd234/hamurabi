@@ -55,11 +55,11 @@
 }]]></component>
   <component name="RunManager" selected="Application.Hammurabi">
     <configuration name="Hammurabi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hammurabi.Hammurabi" />
+      <option name="MAIN_CLASS_NAME" value="hammurabi.src.Hammurabi" />
       <module name="hamurabi" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hammurabi.*" />
+          <option name="PATTERN" value="hammurabi.src.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -71,7 +71,7 @@
       <module name="hamurabi" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hammurabi.*" />
+          <option name="PATTERN" value="hammurabi.src.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,7 +97,7 @@
       <module name="hamurabi" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hammurabi.*" />
+          <option name="PATTERN" value="hammurabi.src.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,7 +113,7 @@
       <module name="hamurabi" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hammurabi.*" />
+          <option name="PATTERN" value="hammurabi.src.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

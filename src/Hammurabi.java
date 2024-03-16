@@ -1,4 +1,4 @@
-package hammurabi;
+package hammurabi.src;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -185,7 +185,7 @@ public class Hammurabi {
     public int getYear() {
         return year;
     }
-  
+
     public int getBushels() {
         return bushels;
     }

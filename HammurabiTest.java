@@ -2,6 +2,7 @@ package hammurabi;
 
 import static org.junit.Assert.*;
 
+import hammurabi.src.Hammurabi;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -26,6 +26,7 @@ Define a single class named `Hammurabi`. Use the following skeleton (but leave o
 
 ```java
 package hammurabi;               // package declaration 
+
 import java.util.Random;         // imports go here
 import java.util.Scanner;
 
@@ -33,8 +34,8 @@ public class Hammurabi {         // must save in a file named Hammurabi.java
     Random rand = new Random();  // this is an instance variable
     Scanner scanner = new Scanner(System.in);
 
-    public static void main(String\[\] args) { // required in every Java program
-        new Hammurabi().playGame();
+    public static void main(String\[\]args) { // required in every Java program
+        new hammurabi.src.Hammurabi().playGame();
     }
 
     void playGame() {
