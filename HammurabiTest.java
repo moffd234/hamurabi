@@ -179,5 +179,14 @@ public class HammurabiTest {
         Assert.assertFalse(output.contains(7));
     }
 
+    @Test
+    public final void testCalcHarvestRate(){
+        int harvestAmount = 60;
+        int bushelsUsedAsSeed = 10;
+        int expectedHarvestRate = 6;
+        int actualHarvestRate = ham.calculateHarvestRate(harvestAmount, bushelsUsedAsSeed);
+        assertEquals(expectedHarvestRate, actualHarvestRate);
+    }
+
 }
 

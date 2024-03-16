@@ -169,6 +169,10 @@ public class Hammurabi {
         return bushelsUsedAsSeed * rate;
     }
 
+    public int calculateHarvestRate(int harvestAmount, int bushelsUsedAsSeed) {
+        return harvestAmount / bushelsUsedAsSeed;
+    }
+
     /**
      * Prints the given message (which should ask the user for some integral
      * quantity), and returns the number entered by the user. If the user's
