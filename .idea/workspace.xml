@@ -47,6 +47,7 @@
     "JUnit.HammurabiTest.testHarvest.executor": "Run",
     "JUnit.HammurabiTest.testImmigrants.executor": "Run",
     "JUnit.HammurabiTest.testNewCostOfLand.executor": "Run",
+    "JUnit.HammurabiTest.testPlagueDeaths1.executor": "Run",
     "JUnit.HammurabiTest.testStarvationDeaths.executor": "Run",
     "JUnit.HammurabiTest.testUprising.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -60,7 +61,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Hammurabi">
+  <component name="RunManager" selected="JUnit.HammurabiTest">
     <configuration name="Hammurabi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hammurabi.src.Hammurabi" />
       <module name="hamurabi" />
@@ -89,7 +90,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HammurabiTest.testGetYearMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HammurabiTest.testPlagueDeaths1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hamurabi" />
       <extension name="coverage">
         <pattern>
@@ -99,13 +100,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="hammurabi" />
       <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
-      <option name="METHOD_NAME" value="testGetYearMessage" />
+      <option name="METHOD_NAME" value="testPlagueDeaths1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HammurabiTest.testImmigrants" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HammurabiTest.testPlagueDeaths2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hamurabi" />
       <extension name="coverage">
         <pattern>
@@ -115,7 +116,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="hammurabi" />
       <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
-      <option name="METHOD_NAME" value="testImmigrants" />
+      <option name="METHOD_NAME" value="testPlagueDeaths2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Hammurabi" />
         <item itemvalue="JUnit.HammurabiTest" />
+        <item itemvalue="JUnit.HammurabiTest.testPlagueDeaths2" />
+        <item itemvalue="JUnit.HammurabiTest.testPlagueDeaths1" />
+        <item itemvalue="Application.Hammurabi" />
         <item itemvalue="JUnit.HammurabiTest.testUprising" />
-        <item itemvalue="JUnit.HammurabiTest.testImmigrants" />
-        <item itemvalue="JUnit.HammurabiTest.testGetYearMessage" />
       </list>
     </recent_temporary>
   </component>

@@ -90,6 +90,10 @@ public class Hammurabi {
             else{
                 immigrantNum = 0;
             }
+            // Determine if there was a plague
+            int deaths = plagueDeaths(population);
+            population -= deaths;
+            
             // Get new landVal
             landVal = newCostOfLand();
 
@@ -123,8 +127,19 @@ public class Hammurabi {
         return (20 * acresOwned + grainInStorage) / (100 * population) + 1;
     }
 
-    public int plagueDeaths(int i) {
-        return 0;
+
+
+    public int plagueDeaths(int population) {
+        int deaths = 0;
+
+        int min = 0;
+        int max = 100;
+        int num = rand.nextInt(max - min + 1) + min;
+        if(num <= 15){
+            deaths += population / 2;
+        }
+
+        return deaths;
     }
 
     // This doesn't pass the unit test unless you take the ceiling despite the README saying we don't need to do any
