@@ -133,7 +133,7 @@ public class HammurabiTest {
                 "The city owns 1000 acres of land.\n" +
                 "Land is currently worth 19 bushels per acre.";
 
-        String actual = ham.getYearMessage();
+        String actual = ham.getSummary();
         Assert.assertEquals(expectedOutput, actual);
     }
 
