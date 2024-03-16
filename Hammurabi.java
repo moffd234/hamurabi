@@ -5,16 +5,39 @@ import java.util.Scanner;
 public class Hammurabi {
     Random rand = new Random();  // this is an instance variable
     Scanner scanner = new Scanner(System.in);
-
+    byte year;
+    int grain;
+    int population;
+    int harvestRate;
+    int numHarvested;
+    int immigrantNum;
+    int landVal;
+    int starvationDeathsNum;
+    int ratTotal;
+    int totalLand;
 
     public static void main(String[] args) {
         new Hammurabi().playGame();
     }
 
+    public Hammurabi(){
+
+        year = 1;
+        grain = 2800;
+        population = 100;
+        landVal = 19;
+        immigrantNum = 0;
+        harvestRate = 0;
+        numHarvested = 0;
+        totalLand = 1000;
+        starvationDeathsNum = 0;
+        immigrantNum = 0;
+        numHarvested = 0;
+        ratTotal = 0;
+
+    }
 
     void playGame() {
-        int grain;
-        int population;
     }
 
     public boolean uprising(int i, int i1) {
@@ -43,5 +66,18 @@ public class Hammurabi {
 
     public int starvationDeaths(int i, int i1) {
         return 0;
+    }
+    public String getYearMessage(){
+        String output = "O great Hammurabi!\n" +
+                "You are in year" + year + " of your ten year rule.\n" +
+                "In the previous year" + starvationDeathsNum + "people starved to death.\n" +
+                "In the previous year" + immigrantNum + "people entered the kingdom.\n" +
+                "The population is now" + population + ".\n" +
+                "We harvested" + numHarvested + "bushels at" + harvestRate + "bushels per acre.\n" +
+                "Rats destroyed" + ratTotal + "bushels, leaving 2800 bushels in storage.\n" +
+                "The city owns" + totalLand + "acres of land.\n" +
+                "Land is currently worth" + landVal + "bushels per acre.";
+
+        return output;
     }
 }
