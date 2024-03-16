@@ -126,7 +126,7 @@ public class HammurabiTest {
     }
     @Test
     public final void testGetYearMessage(){
-        String expectedOutput = "O great Hammurabi!\n" +
+        String expectedOutput = "\n\nO great Hammurabi!\n" +
                 "You are in year 1 of your ten year rule.\n" +
                 "In the previous year 0 people starved to death.\n" +
                 "In the previous year 5 people entered the kingdom.\n" +

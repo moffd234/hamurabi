@@ -58,7 +58,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.HammurabiTest.testNewCostOfLand">
+  <component name="RunManager" selected="Application.Hammurabi">
     <configuration name="Hammurabi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hammurabi.src.Hammurabi" />
       <module name="hamurabi" />
@@ -88,7 +88,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HammurabiTest.testGenHarvestRate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HammurabiTest.testGetYearMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hamurabi" />
       <extension name="coverage">
         <pattern>
@@ -98,7 +98,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="hammurabi" />
       <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
-      <option name="METHOD_NAME" value="testGenHarvestRate" />
+      <option name="METHOD_NAME" value="testGetYearMessage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HammurabiTest.testNewCostOfLand" />
         <item itemvalue="Application.Hammurabi" />
+        <item itemvalue="JUnit.HammurabiTest.testGetYearMessage" />
+        <item itemvalue="JUnit.HammurabiTest.testNewCostOfLand" />
         <item itemvalue="JUnit.HammurabiTest.testCalcHarvestRate" />
         <item itemvalue="JUnit.HammurabiTest.testStarvationDeaths" />
-        <item itemvalue="JUnit.HammurabiTest.testGenHarvestRate" />
       </list>
     </recent_temporary>
   </component>

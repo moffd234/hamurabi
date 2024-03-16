@@ -37,42 +37,44 @@ public class Hammurabi {
     }
 
     void playGame() {
+        while(year <= 10) {
+            printSummary();
 
-        printSummary();
+            // Buy land and update variables
+            int boughtLand = askHowManyAcresToBuy(landVal, bushels);
+            landTotal = calcAddedLand(landTotal, boughtLand);
+            bushels -= boughtLand * landVal;
+            System.out.println("Total land " + landTotal + " Total Bushels " + bushels);
 
-        // Buy land and update variables
-        int boughtLand = askHowManyAcresToBuy(landVal, bushels);
-        landTotal = calcAddedLand(landTotal, boughtLand);
-        bushels -= boughtLand * landVal;
-        System.out.println("Total land " + landTotal + " Total Bushels " + bushels);
+            // Sell land and update variables
+            int soldLand = askHowManyAcresToSell(landTotal);
+            landTotal = calcSoldLand(landTotal, soldLand);
+            bushels += soldLand * landVal;
+            System.out.println("Total land " + landTotal + " Total Bushels " + bushels);
 
-        // Sell land and update variables
-        int soldLand = askHowManyAcresToSell(landTotal);
-        landTotal = calcSoldLand(landTotal, soldLand);
-        bushels += soldLand * landVal;
-        System.out.println("Total land " + landTotal + " Total Bushels " + bushels);
+            // Feed the population
+            int bushelsFed = askHowMuchGrainToFeedPeople(bushels);
+            bushels -= bushelsFed;
+            System.out.println("Total Bushels " + bushels);
 
-        // Feed the population
-        int bushelsFed = askHowMuchGrainToFeedPeople(bushels);
-        bushels -= bushelsFed;
-        System.out.println("Total Bushels " + bushels);
+            // Plant bushels
+            int bushelsPlanted = askHowManyAcresToPlant(landTotal, population, bushels);
+            bushels -= bushelsPlanted;
 
-        // Plant bushels
-        int bushelsPlanted = askHowManyAcresToPlant(landTotal, population, bushels);
-        bushels -= bushelsPlanted;
+            // Find the harvest rate between turns
+            numHarvested = harvest(bushelsPlanted);
+            harvestRate = calculateHarvestRate(numHarvested, bushelsPlanted);
+            bushels += numHarvested;
 
-        // Find the harvest rate between turns
-        numHarvested = harvest(bushelsPlanted);
-        harvestRate = calculateHarvestRate(numHarvested, bushelsPlanted);
+            // Handle starvation between rounds
+            numStarved = starvationDeaths(population, bushelsFed);
+            population -= numStarved;
 
-        // Handle starvation between rounds
-        numStarved = starvationDeaths(population, bushelsFed);
-        population -= numStarved;
+            // Get new landVal
+            landVal = newCostOfLand();
 
-        // Get new landVal
-        landVal = newCostOfLand();
-
-        year++;
+            year++;
+        }
     }
 
     public boolean uprising(int i, int i1) {
@@ -109,7 +111,7 @@ public class Hammurabi {
     }
     public String getSummary(){
 
-        return "O great Hammurabi!\n" +
+        return "\n\nO great Hammurabi!\n" +
                 "You are in year " + year + " of your ten year rule.\n" +
                 "In the previous year " + numStarved + " people starved to death.\n" +
                 "In the previous year " + immigrantNum + " people entered the kingdom.\n" +
@@ -145,7 +147,7 @@ public class Hammurabi {
     }
 
     int askHowMuchGrainToFeedPeople(int bushels){
-        int numGrainFed = getNumber("O great Hammurabi, how much grain do you wish to feed your citizens");
+        int numGrainFed = getNumber("O great Hammurabi, how much grain do you wish to feed your citizens\n");
         while(numGrainFed > bushels){
             numGrainFed = getNumber("O Great Hammurabi, surely you jest! We have only " + bushels + " acres left!\n");
         }
