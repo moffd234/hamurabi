@@ -75,10 +75,6 @@ public class Hammurabi {
         return 0;
     }
 
-    public int harvest(int i) {
-        return 0;
-    }
-
     public int immigrants(int i, int i1, int i2) {
         return 0;
     }
@@ -158,6 +154,18 @@ public class Hammurabi {
 
         }
         return numPlanted;
+    }
+
+    public int genHarvestRate(){
+        int min = 1;
+        int max = 6;
+        return rand.nextInt(max - min + 1) + min;
+    }
+
+    // README says to use harvest(int acres, int bushelsUsedAsSeed) but the test case only gives 1 argument
+    public int harvest(int bushelsUsedAsSeed){
+        int rate = genHarvestRate();
+        return bushelsUsedAsSeed * rate;
     }
 
     /**

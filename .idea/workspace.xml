@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d409351-9f7f-4de2-93f3-7853256f5ed0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Hammurabi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hammurabi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Hammurabi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hammurabi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,7 @@
     "JUnit.HammurabiTest.testCalcAddedLand.executor": "Run",
     "JUnit.HammurabiTest.testCalcSoldLand.executor": "Run",
     "JUnit.HammurabiTest.testGetYearMessage.executor": "Run",
+    "JUnit.HammurabiTest.testHarvest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -53,7 +55,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Hammurabi">
+  <component name="RunManager" selected="JUnit.HammurabiTest.testHarvest">
     <configuration name="Hammurabi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hammurabi.src.Hammurabi" />
       <module name="hamurabi" />
@@ -93,22 +95,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HammurabiTest.testCalcAddedLand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hamurabi" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hammurabi.src.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hammurabi" />
-      <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
-      <option name="METHOD_NAME" value="testCalcAddedLand" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HammurabiTest.testCalcSoldLand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hamurabi" />
       <extension name="coverage">
@@ -125,13 +111,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HammurabiTest.testHarvest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hamurabi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hammurabi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hammurabi" />
+      <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
+      <option name="METHOD_NAME" value="testHarvest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HammurabiTest.testHarvest" />
         <item itemvalue="Application.Hammurabi" />
         <item itemvalue="JUnit.HammurabiTest" />
         <item itemvalue="JUnit.HammurabiTest,testCalcAddedLand and 1 more" />
         <item itemvalue="JUnit.HammurabiTest.testCalcSoldLand" />
-        <item itemvalue="JUnit.HammurabiTest.testCalcAddedLand" />
       </list>
     </recent_temporary>
   </component>
