@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d409351-9f7f-4de2-93f3-7853256f5ed0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Hammurabi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hammurabi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +48,7 @@
     "JUnit.HammurabiTest.testImmigrants.executor": "Run",
     "JUnit.HammurabiTest.testNewCostOfLand.executor": "Run",
     "JUnit.HammurabiTest.testStarvationDeaths.executor": "Run",
+    "JUnit.HammurabiTest.testUprising.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -121,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HammurabiTest.testNewCostOfLand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HammurabiTest.testUprising" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hamurabi" />
       <extension name="coverage">
         <pattern>
@@ -131,7 +131,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="hammurabi" />
       <option name="MAIN_CLASS_NAME" value="hammurabi.HammurabiTest" />
-      <option name="METHOD_NAME" value="testNewCostOfLand" />
+      <option name="METHOD_NAME" value="testUprising" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,10 +140,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Hammurabi" />
-        <item itemvalue="JUnit.HammurabiTest.testImmigrants" />
         <item itemvalue="JUnit.HammurabiTest" />
+        <item itemvalue="JUnit.HammurabiTest.testUprising" />
+        <item itemvalue="JUnit.HammurabiTest.testImmigrants" />
         <item itemvalue="JUnit.HammurabiTest.testGetYearMessage" />
-        <item itemvalue="JUnit.HammurabiTest.testNewCostOfLand" />
       </list>
     </recent_temporary>
   </component>

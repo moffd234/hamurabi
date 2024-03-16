@@ -18,6 +18,7 @@ public class Hammurabi {
     int cropsEatenByRats;
     int landTotal;
     int totalStarved;
+    boolean wasUprising;
 
 
     public static void main(String[] args) {
@@ -37,6 +38,7 @@ public class Hammurabi {
         numHarvested = 3000;
         cropsEatenByRats = 200;
         totalStarved = 0;
+        wasUprising = false;
     }
 
     void playGame() {
@@ -71,6 +73,12 @@ public class Hammurabi {
 
             // Handle starvation between rounds
             numStarved = starvationDeaths(population, bushelsFed);
+            // Stop the loop if there was an uprising
+            if(uprising(population, numStarved)){
+                year = 10;
+                wasUprising = true;
+                break;
+            }
             population -= numStarved;
             totalStarved += numStarved;
 
@@ -87,11 +95,18 @@ public class Hammurabi {
 
             year++;
         }
-        finalSummary();
+        if(!wasUprising) {
+            finalSummary();
+        }
+        else{
+            System.out.println("You let too many people die from starvation! As a result the population has decided" +
+                    " to start a revolution and throw you out of office.");
+        }
     }
 
-    public boolean uprising(int i, int i1) {
-        return false;
+    // Needs to use floating point arithmetic to find the percentage
+    public boolean uprising(int population, int howManyPeopleStarved) {
+        return howManyPeopleStarved > 0.45 * population;
     }
 
     public int grainEatenByRats(int i) {
