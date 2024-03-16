@@ -15,32 +15,33 @@ public class Hammurabi {
     int landVal;
     int peopleStarvedLastYear;
     int cropsEatenByRats;
-    int totalLand;
+    int landTotal;
 
 
     public static void main(String[] args) {
-        new Hammurabi().playGame();
+        //new Hammurabi().playGame();
     }
 
     public Hammurabi(){
-
         // Setup initial values
         year = 1;
         bushels = 2800;
         population = 100;
         landVal = 19;
         harvestRate = 3;
-        totalLand = 1000;
+        landTotal = 1000;
         peopleStarvedLastYear = 0;
         immigrantNum = 5;
         numHarvested = 3000;
         cropsEatenByRats = 200;
-        printSummary();
-        int boughtLand = askHowManyAcresToBuy(landVal, bushels);
-        int soldLand = askHowManyAcresToSell(totalLand);
     }
 
     void playGame() {
+
+        printSummary();
+        int boughtLand = askHowManyAcresToBuy(landVal, bushels);
+        landTotal = calcAddedLand(landVal, boughtLand);
+        int soldLand = askHowManyAcresToSell(landTotal);
     }
 
     public boolean uprising(int i, int i1) {
@@ -78,7 +79,7 @@ public class Hammurabi {
                 "The population is now " + population + ".\n" +
                 "We harvested " + numHarvested + " bushels at " + harvestRate + " bushels per acre.\n" +
                 "Rats destroyed " + cropsEatenByRats + " bushels, leaving " + bushels + " bushels in storage.\n" +
-                "The city owns " + totalLand + " acres of land.\n" +
+                "The city owns " + landTotal + " acres of land.\n" +
                 "Land is currently worth " + landVal + " bushels per acre.\n\n";
 
         return output;
@@ -93,6 +94,9 @@ public class Hammurabi {
             numAcres = getNumber("O Great Hammurabi, surely you jest! We have only " + bushels + " bushels left!\n");
         }
         return numAcres;
+    }
+    public int calcAddedLand(int prevTotal, int acresBought){
+        return prevTotal + acresBought;
     }
 
     int askHowManyAcresToSell(int acresOwned){
@@ -161,8 +165,8 @@ public class Hammurabi {
         return cropsEatenByRats;
     }
 
-    public int getTotalLand() {
-        return totalLand;
+    public int getLandTotal() {
+        return landTotal;
     }
 
 }

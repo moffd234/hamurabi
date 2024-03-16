@@ -137,5 +137,18 @@ public class HammurabiTest {
         Assert.assertEquals(expectedOutput, actual);
     }
 
+    @Test
+    public final void testCalcAddedLand(){
+        // Given
+        int expected = ham.getLandTotal() + 5;
+
+        // When
+        int actual = ham.calcAddedLand(ham.getLandTotal(), 5);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+
+    }
+
 }
 
