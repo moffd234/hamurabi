@@ -95,16 +95,18 @@ public class Hammurabi {
         }
         return numAcres;
     }
-    public int calcAddedLand(int prevTotal, int acresBought){
-        return prevTotal + acresBought;
-    }
-
     int askHowManyAcresToSell(int acresOwned){
         int numAcres = getNumber("O great Hammurabi, how many acres shall you sell?\n");
         while(numAcres > acresOwned){
             numAcres = getNumber("O Great Hammurabi, surely you jest! We have only " + acresOwned + " acres left!\n");
         }
         return numAcres;
+    }
+    public int calcAddedLand(int prevTotal, int acresBought){
+        return prevTotal + acresBought;
+    }
+    public int calcSoldLand(int prevTotal, int acresSold){
+        return prevTotal - acresSold;
     }
 
     /**
