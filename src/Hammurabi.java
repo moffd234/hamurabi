@@ -1,5 +1,4 @@
 package hammurabi.src;
-import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
