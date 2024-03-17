@@ -73,6 +73,7 @@ public class Hammurabi {
 
             // Handle starvation between rounds
             numStarved = starvationDeaths(population, bushelsFed);
+
             // Stop the loop if there was an uprising
             if(uprising(population, numStarved)){
                 year = 10;
@@ -96,6 +97,10 @@ public class Hammurabi {
 
             // Get new landVal
             landVal = newCostOfLand();
+
+            // Handle rat infestation
+            cropsEatenByRats = grainEatenByRats(bushels);
+            bushels -= cropsEatenByRats;
 
             year++;
         }
