@@ -93,7 +93,7 @@ public class Hammurabi {
             // Determine if there was a plague
             int deaths = plagueDeaths(population);
             population -= deaths;
-            
+
             // Get new landVal
             landVal = newCostOfLand();
 
@@ -113,10 +113,23 @@ public class Hammurabi {
         return howManyPeopleStarved > 0.45 * population;
     }
 
-    public int grainEatenByRats(int i) {
-        return 0;
+    boolean isRatInvasion(){
+        int min = 0;
+        int max = 100;
+        int num = rand.nextInt(max - min + 1) + min;
+        return num <= 40;
     }
 
+    // Needs to use a floating point number to find percentage
+    public int grainEatenByRats(int bushels) {
+        if (isRatInvasion()) {
+            double percentage = (rand.nextDouble() * 21) + 10; // When using nextInt I never got a 29%
+                                                             // I think this is due to the rounding when casting to int
+            return (int) (bushels * (percentage / 100));
+        }
+
+        return 0;
+    }
     public int newCostOfLand() {
         int min = 17;
         int max = 23;
